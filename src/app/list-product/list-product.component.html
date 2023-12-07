@@ -1,0 +1,24 @@
+<table class="table" border="3">
+    <thead>
+    <tr>
+        <th>id</th>
+        <th>title</th>
+        <th>price</th>
+        <th>quantity</th>
+        <th>likes</th>
+        <th> actions</th>
+    </tr>
+    </thead>
+    <tbody *ngFor="let i of listProdcut;">
+    <tr>
+    <td>{{i.id}}</td>
+    <td>{{i.title}}</td>
+    <td>{{i.price}}</td>
+    <td>{{i.quantity}}</td>
+    <td>{{i.like}}</td>
+    <td> <button [routerLink]="['detail',i.id]" class ="btn btn-primary">Detail Produit</button></td>
+
+    </tr>
+    </tbody>
+    <button [routerLink]="['addProduct']" class="btn btn-primary"> ajouter Produit</button>
+</table>
